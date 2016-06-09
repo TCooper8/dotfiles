@@ -2,6 +2,9 @@
 export ZSH=$HOME/.oh-my-zsh
 export ZSH_CUSTOM=~/.zsh
 
+source $(brew --prefix nvm)/nvm.sh
+alias vim='/usr/local/Cellar/vim/7.4.1817/bin/vim'
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -86,3 +89,6 @@ eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$HOME/.cargo/bin:$PATH"
 export RUST_SRC_PATH="$HOME/tooling/rust/src"
 clear
+
+PROMPT="%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m %{$fg_no_bold[yellow]%}%1~ %{$reset_color%}%# "
+RPROMPT="[%{$fg_no_bold[yellow]%}%?%{$reset_color%}]"

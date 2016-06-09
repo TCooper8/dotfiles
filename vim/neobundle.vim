@@ -23,11 +23,22 @@ NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/context_filetype.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'wincent/Command-T'
-NeoBundle 'bling/vim-airline'
+NeoBundle 'vim-airline/vim-airline'
+NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'vim-airline/vim-airline-themes'
 NeoBundle 'jeffkreeftmeijer/vim-numbertoggle'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'Lokaltog/vim-easymotion'
+NeoBundle 'fsharp/vim-fsharp', {
+           \ 'description': 'F# support for Vim',
+           \ 'lazy': 1,
+           \ 'autoload': {'filetypes': 'fsharp'},
+           \ 'build': {
+           \   'unix':  'make fsautocomplete',
+           \ },
+           \ 'build_commands': ['curl', 'make', 'mozroots', 'touch', 'unzip'],
+           \}
 
 " mostly from Shougo
 NeoBundle 'Shougo/unite.vim'
@@ -65,6 +76,8 @@ NeoBundle 'vim-erlang/vim-erlang-omnicomplete'
 NeoBundle 'godlygeek/tabular'
 NeoBundle 'editorconfig/editorconfig-vim'
 
+NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
+NeoBundle 'derekwyatt/vim-scala'
 
 " Required:
 call neobundle#end()
