@@ -100,3 +100,5 @@ function! JSFormat()
     call setreg('/', l:last_search)
 endfunction
 set backspace=indent,eol,start
+
+set noswapfile
